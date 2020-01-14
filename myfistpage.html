@@ -2,15 +2,28 @@
 <html>
 <head>
    <title>Моя первая веб-страница</title>
+
+   <script type="text/javascript">
+    function ChangePl()
+    {
+    document.getElementById("p1").style.fontSize=+;
+        }
+    function ChangeMin()
+    {
+        document.getElementById("p1").style.fontSize=-;
+    }
+    
+    </script>
+
 </head>
 <body>
     <h1>Моя первая веб-страница</h1>
-    <h2>Что это такое</h2>
-<script>
-alert ("Внимание!"); 
-</script>
-
-
+    <h2>Что такое JS</h2>
+    
+    
+        <p id="p1">Привет,Иван!</p>
+        <input type="button" onclick="ChangePl()" value="+ размер" />
+        <input type="button" onclick="ChangeMin()" value="- размер" />
         
 </body>
 </html>
