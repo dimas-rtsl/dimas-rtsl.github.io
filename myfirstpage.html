@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+   <title>Моя первая веб-страница</title>
+
+   <script >
+    function ChangePl(){
+        document.getElementById("p1").style.fontSize='20px';
+        }
+    function ChangeMin(){
+        document.getElementById("p1").style.fontSize='10px';
+    }
+           
+    function raz(ttt) {
+        document.getElementById("t1").value = ttt;
+    }
+    </script>
+
+</head>
+<body>
+    <h1>Моя первая веб-страница</h1>
+    <h2>Что такое JS</h2>
+    
+    <form action="">
+        <p id="p1">Привет,Иван!</p>
+        <input type="button" onclick="ChangePl()" value="+ размер" />
+        <input type="button" onclick="ChangeMin()" value="- размер" />
+    </form>
+
+    <input id="t1" type="text"/>
+<br><br>
+<input type="button" value="1" onclick="raz(this.value)"/>
+<input type="button" value="2" onclick="raz(this.value)"/>
+<input type="button" value="3" onclick="raz(this.value)"/>
+<br>
+<input type="button" value="4" onclick="raz(this.value)"/>
+<input type="button" value="5" onclick="raz(this.value)"/>
+<input type="button" value="6" onclick="raz(this.value)"/>
+<br>
+<input type="button" value="7" onclick="raz(this.value)"/>
+<input type="button" value="8" onclick="raz(this.value)"/>
+<input type="button" value="9" onclick="raz(this.value)"/>
+<br>
+<input type="button" value="="/>
+<input type="button" value="0"  onclick="raz(this.value)"/>
+</div>
+</body>
+</html>
