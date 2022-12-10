@@ -4,6 +4,7 @@
    <title>Моя первая веб-страница</title>
 
    <script >
+       let val_t,val1,val2,val_res;
     function ChangePl(){
         document.getElementById("p1").style.fontSize='20px';
         }
@@ -12,7 +13,25 @@
     }
            
     function raz(ttt) {
-        document.getElementById("t1").value = ttt;
+        document.getElementById("t1").value = document.getElementById("t1").value+ttt;
+        val_t=document.getElementById("t1").value;
+    }
+
+    function act(v_act) {
+        if (v_act=='+') {
+             val1=+(val_t);
+             document.getElementById("val1").innerText =String(val1)+'+';
+             document.getElementById("t1").value ='';
+             return;
+        }
+        if (v_act=='=') {
+            val2=+(document.getElementById("t1").value);
+            document.getElementById("val2").innerText =String(val2);
+             val_res=val1+val2;
+             document.getElementById("t1").value=val_res;
+             return;
+        } 
+        
     }
     </script>
 
@@ -27,7 +46,11 @@
         <input type="button" onclick="ChangeMin()" value="- размер" />
     </form>
 Калькулятор:
-    <input id="t1" type="text"/>
+<h1 id='val1'></h1>
+<h1 id='val2'></h1>
+<h1 id='v_act'></h1>
+<br>
+<input id="t1" type="text"/>
 <br><br>
 <input type="button" value="1" onclick="raz(this.value)"/>
 <input type="button" value="2" onclick="raz(this.value)"/>
@@ -41,8 +64,9 @@
 <input type="button" value="8" onclick="raz(this.value)"/>
 <input type="button" value="9" onclick="raz(this.value)"/>
 <br>
-<input type="button" value="="/>
-<input type="button" value="0"  onclick="raz(this.value)"/>
+<input type="button" value="+" onclick="act(this.value)"/>
+<input type="button" value="=" onclick="act(this.value)"/>
+<input type="button" value="0" onclick="raz(this.value)"/>
 </div>
 </body>
 </html>
